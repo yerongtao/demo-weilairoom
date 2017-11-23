@@ -6,19 +6,27 @@
 
     $(document).ready(function () {
         // 下方导航 menu-main 的切换
-        $(".munu-li").each(function (index) {
-            $(this).click(function () {
-                // 导航 action
-                $("li").removeClass ("action");
-                $(this).addClass ("action");
-                // 页面 action
-                $(".page").removeClass("action");
-                $(".page").eq(index).addClass("action");
-                // 页面切换
-                $(".page").css("display", "none");
-                $(".page.action").css("display", "block");
-            });
-        });
+        $(".menu-main").on("click","li",function(){
+            $(this).addClass("action").siblings().removeClass("action");
+            var index = $(this).index();
+            // console.log(index);
+            $(".page").css("display","none");
+            $(".page").eq(index).css("display","block");  
+            $(".page-hx-xiangqing").css("display","none");
+        })  
+        // $(".menu-li").each(function (index) {
+        //     $(this).click(function () {
+        //         // 导航 action"
+        //         $("li").removeClass ("action");
+        //         $(this).addClass ("action");
+        //         // 页面 action
+        //         $(".page").removeClass("action");
+        //         $(".page").eq(index).addClass("action");
+        //         // 页面切换
+        //         $(".page").css("display", "none");
+        //         $(".page.action").css("display", "block");
+        //     });
+        // });
         // 户型鉴赏查看详情按钮打开户型鉴赏详情页
         $(".hx-btn").click(function(){
             $(".page-hx-xiangqing").css("display", "block");
