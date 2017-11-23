@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.page-hx-xiangqing {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background-image: url('../images/bg_hx.jpg');
+    background-size: cover;
+    .hx-xq-content {
+        width: 100%;
+        height: 45%;
+        top: 7%;
+        position: absolute;
+        #hx-xq-3d {
+            width: 100%;
+            height: 100%;
+            background-color: #efefef;
+        }
+        }
+    .hx-xq-title {
+        width: 100%;
+        bottom: 12%;
+        position: absolute;
+    }
+    .hx-xq-btn {
+        width: 25%;
+        height: 6vw;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        .hx-xq-btn-img {
+            height: 100%;
+        }
+        a{
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            z-index: 10;
+        }
+        .btn-1 {
+            left: 0;
+        }
+        .btn-2 {
+            right: 0;
+        }
+    }
+    .hx-xq-back {
+        width: 8%;
+        top: 1.5%;
+        right: 2.5%;
+        position: absolute
+    }
+    
+}

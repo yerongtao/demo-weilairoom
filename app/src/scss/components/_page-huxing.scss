@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.page-huxing {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // background-color: #9f3d3d
+    background-image: url('../images/bg_hx_bg.jpg');
+    background-size: contain;
+    .hx-list {
+        display: block;
+        position: absolute;
+        border-radius: 3px;
+        overflow: hidden;
+        width: 93%;
+        left: 0;
+        right: 0;
+        top: 64vw;
+        margin: auto;
+        .hx-bg {
+            width: 100%;
+        }
+        .hx-btn {
+            display: block;
+            width: 16vw;
+            position: absolute;
+            bottom: 6.3vw;
+            right: 5.3vw;
+            img {
+                width: 100%
+            }
+        }
+    }
+    .hx-1 {
+        top: 68vw;
+    }
+    .hx-2 {
+        top: 92vw;
+    }
+    
+}

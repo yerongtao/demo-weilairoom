@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wechat H5 Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Add your keywords and description here for SEO. -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+    <!-- Uncomment this if you need apple touch icon. -->
+    <!--
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+    -->
+
+    <!-- Don't delete this. It's needed for development workflow. -->
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+
+<body>
+<div class="loading-overlay">
+    <img src="images/loading.svg">
+</div>
+
+<!-- 下方导航栏 menu-main -->
+<ul class="menu-main">
+    <li class="munu-li 3d-show">
+        <i class="icon-1"></i>
+        <span>全景鸟瞰</span>
+    </li>
+    <li class="munu-li loushu-show action">
+        <i class="icon-2"></i>
+        <span>楼书展示</span>
+    </li>
+    <li class="munu-li quwei-show">
+        <i class="icon-3"></i>
+        <span>区位交通</span>
+    </li>
+    <li class="munu-li huxing-show">
+        <i class="icon-4"></i>
+        <span>户型鉴赏</span>
+    </li>
+    <li class="munu-li tools-show">
+        <i class="icon-5"></i>
+        <span>辅助工具</span>
+    </li>
+</ul>
+
+<!-- 全景鸟瞰 -->
+<div class="page page-quanjing">
+    <!-- <canvas ></canvas> -->
+    <iframe id="quanjing-3d-show" src="http://720yun.com/t/9cajzOtuvu3?pano_id=6664376" frameborder="0"></iframe>
+</div>
+
+<!-- 楼书展示 swiper-container -->
+<div class="page page-loushu swiper-container action">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide-1">
+            <div class="item-image animated" data-ani-name="slideInLeft" data-ani-duration="1s" data-ani-delay="0s"></div>
+            <p class="item-text animated" data-ani-name="slideInRight" data-ani-duration="1s" data-ani-delay="0.3s">I'm a coder!</p>
+        </div>
+        <div class="swiper-slide slide-2">
+            <div class="item-image animated" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0s"></div>
+            <p class="item-text animated" data-ani-name="bounceInUp" data-ani-duration="1s" data-ani-delay="0.3s">I'm a frontend developer!</p>
+        </div>
+        <div class="swiper-slide slide-3">
+            <div class="item-image animated" data-ani-name="flipInX" data-ani-duration="1s" data-ani-delay="0s"></div>
+            <p class="item-text animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0.3s">I'm a javascript newbie!</p>
+        </div>
+        <div class="swiper-slide slide-4">
+            <div class="item-image animated" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0s"></div>
+            <p class="item-text animated" data-ani-name="bounceInUp" data-ani-duration="1s" data-ani-delay="0.3s">the first page by my change</p>
+        </div>
+        <div class="swiper-slide slide-5">
+            <div class="item-image animated" data-ani-name="flipInX" data-ani-duration="1s" data-ani-delay="0s"></div>
+            <p class="item-text animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0.3s">you can see it is change</p>
+        </div>
+    </div>
+    <button class="up-arrow">
+        <i class="icon-angle-double-up"></i>
+    </button>
+</div>
+
+<!-- 区位交通 -->
+<div class="page page-quwei">
+
+</div>
+
+<!-- 户型鉴赏 -->
+<div class="page page-huxing">
+    <div class="hx-list hx-1">
+        <img class="hx-bg" src="../images/hx1.jpg" alt="">
+        <a class="hx-btn" href="javascript:void(0);">
+            <img src="../images/xiangqi.png" alt="">
+        </a>
+    </div>
+    <div class="hx-list hx-2">
+        <img class="hx-bg" src="../images/hx2.jpg" alt="">
+        <a class="hx-btn" href="javascript:void(0);">
+            <img src="../images/xiangqi.png" alt="">
+        </a>
+    </div>
+</div>
+
+<!-- 户型鉴赏详情 -->
+<div class="page page-hx-xiangqing">
+    <div class="hx-xq-content">
+        <!-- <img src="" alt=""> -->
+        <canvas id="hx-xq-3d"></canvas>
+    </div>
+    <img class="hx-xq-title" src="../images/w01.png" alt="">
+    <div class="hx-xq-btn">
+        <img class="hx-xq-btn-img" src="../images/qhbtn1.png" alt="">
+        <a class="btn-1" href="javascript:void(0);"></a>
+        <a class="btn-2" href="javascript:void(0);"></a>
+    </div>
+    <img class="hx-xq-back" src="../images/back.png" alt="">
+</div>
+
+<!-- 辅助工具 -->
+<div class="page page-tools">
+        
+</div>
+
+
+<button class="btn-music">
+    <i class="icon-note"></i>
+</button>
+
+<audio loop>
+    <source src="audios/background.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Don't delete this. It's needed for development workflow. -->
+<!-- inject:js -->
+<!-- endinject -->
+
+
+
+
+</body>
+
+</html>
