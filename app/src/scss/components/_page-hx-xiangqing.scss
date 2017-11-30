@@ -5,23 +5,33 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 9;
-    background-image: url('../images/bg_hx.jpg');
+    z-index: 999;
+    background-image: url('../images/ld/bg_hx.jpg');
     background-size: cover;
     .hx-xq-content {
         width: 100%;
         height: 45%;
         top: 7%;
         position: absolute;
-        .hx-xq-pm {
-            width: 100%;
-        }
-        #hx-xq-3d {
+        .hx-xq {
             width: 100%;
             height: 100%;
-            background-color: #efefef;
+            position: absolute;
+            display: none;
+            .hx-xq-2d {
+                width: 100%;
+                height: 100%;
+            }
+            #hx-xq-3d {
+                width: 100%;
+                height: 100%;
+                background-color: #efefef;
+            }
         }
+        .hx-xq.action {
+            display: block;
         }
+    }
     .hx-xq-title {
         width: 100%;
         bottom: 12%;

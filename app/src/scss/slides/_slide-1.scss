@@ -1,31 +1,56 @@
 .slide-1 {
     // background-color: #e88a63;
     // background-image: url('../images/bg_p1.jpg');
-    background-image: url('../images/jzf/pg_1.png');
+    background-image: url('../images/jzf/bg_01.png');
     background-size: cover;
-    .item-image {
-        width: 18rem;
-        height: 18rem;
+    .item-logo {
+        width: 15rem;
+        height: 4.9rem;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 4rem;
+        top: 5rem;
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url('../images/github-1.png');
+        background-image: url('../images/jzf/jzf_logo.png');
     }
     .item-text {
-        width: 18rem;
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: bold;
+        width: 21rem;
+        height: 10rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
-        top: 24rem;
+        top: 12rem;
         left: 0;
         right: 0;
-        margin: 0 auto;
-        text-align: center;
+        margin: auto;
+        background-image: url('../images/jzf/jzf_text.png');
+    }
+    .item-image {
+        width: 17rem;
+        height: 21rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 3rem;
+        margin: auto;
+        background-image: url('../images/jzf/jzf_img.png');
+    }
+    .item-slogan {
+        width: 6.44rem;
+        height: 1.42rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+        background-image: url('../images/jzf/jzf_th_logo.png');
     }
 }

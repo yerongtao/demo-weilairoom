@@ -20,6 +20,39 @@ var uglify = require('gulp-uglify');
 var vendors = require('./config/vendors');
 
 
+// var fs = require('fs');
+// var path = require('path');
+// var merge = require('merge-stream');
+
+// var scriptsPath = 'app/src/javascripts';
+
+
+// function getFolders(dir) {
+//     return fs.readdirSync(dir)
+//       .filter(function(file) {
+//         return fs.statSync(path.join(dir, file)).isDirectory();
+//       });
+// }
+// gulp.task('publish-js', function() {
+//     var folders = getFolders(scriptsPath);
+//     var jsVendors = vendors.javascripts;
+//     var tasks = folders.map(function(folder) {
+//        // 拼接成 foldername.js
+//        // 写入输出
+//        // 压缩
+//        // 重命名为 folder.min.js
+//        // 再一次写入输出
+//        return gulp.src(path.join(scriptsPath, folder, '/*.js')),gulp.src(jsVendors)
+//          .pipe(concat(folder + '.js'))
+//         //  .pipe(concat('bundle.js'))
+//          .pipe(gulp.dest('app/dist/javascripts'))
+//          .pipe(uglify())
+//          .pipe(rename(folder + '.min.js'))
+//          .pipe(gulp.dest('app/dist/javascripts'));
+//     });
+ 
+//     return merge(tasks);
+//  });
 
 /* ============================================================================================================
 ============================================ For Development ==================================================
@@ -59,6 +92,18 @@ gulp.task('publish-audios', function () {
         .pipe(gulp.dest('app/dist/audios'));
 });
 
+// 添加模型
+gulp.task('publish-model', function () {
+    return gulp.src('app/src/model/*')
+        .pipe(gulp.dest('app/dist/model'));
+});
+// 添加贴图
+gulp.task('publish-maps', function () {
+    return gulp.src('app/src/maps/*')
+        .pipe(gulp.dest('app/dist/maps'));
+});
+
+
 // compile sass, concat stylesheets in the right order,
 // and save as app/dist/stylesheets/bundle.css
 gulp.task('publish-css', function () {
@@ -84,10 +129,10 @@ gulp.task('publish-css', function () {
 // and save as app/dist/javascripts/bundle.js
 gulp.task('publish-js', function () {
     var jsVendors = vendors.javascripts;
-
     return streamSeries(
         gulp.src(jsVendors),
         gulp.src('app/src/javascripts/main.js')
+        // gulp.src('app/src/javascripts/three/**/*.js')
             .pipe(plumber({
                 errorHandler: errorAlert
             }))
@@ -133,6 +178,8 @@ gulp.task('watch', function () {
     gulp.watch('app/src/fonts/**/*', ['publish-fonts']);
     gulp.watch('app/src/images/**/*', ['publish-images']);
     gulp.watch('app/src/audios/**/*', ['publish-audios']);
+    gulp.watch('app/src/audios/**/*', ['publish-model']);
+    gulp.watch('app/src/audios/**/*', ['publish-maps']);
 
     gulp.watch('app/dist/index.html').on('change', browserSync.reload);
     gulp.watch('app/dist/javascripts/*').on('change', browserSync.reload);
@@ -154,7 +201,7 @@ gulp.task('clean-files', function(cb) {
 
 // development workflow task
 gulp.task('dev', function (cb) {
-    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
+    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-model', 'publish-maps', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
 });
 
 // default task
