@@ -102,6 +102,12 @@ gulp.task('publish-maps', function () {
     return gulp.src('app/src/maps/*')
         .pipe(gulp.dest('app/dist/maps'));
 });
+// 添加three
+gulp.task('publish-three', function () {
+    return gulp.src('app/src/javascripts/**/*')
+        .pipe(gulp.dest('app/dist/javascripts'));
+});
+
 
 
 // compile sass, concat stylesheets in the right order,
@@ -180,6 +186,7 @@ gulp.task('watch', function () {
     gulp.watch('app/src/audios/**/*', ['publish-audios']);
     gulp.watch('app/src/audios/**/*', ['publish-model']);
     gulp.watch('app/src/audios/**/*', ['publish-maps']);
+    gulp.watch('app/src/audios/**/*', ['publish-three']);
 
     gulp.watch('app/dist/index.html').on('change', browserSync.reload);
     gulp.watch('app/dist/javascripts/*').on('change', browserSync.reload);
@@ -201,7 +208,7 @@ gulp.task('clean-files', function(cb) {
 
 // development workflow task
 gulp.task('dev', function (cb) {
-    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-model', 'publish-maps', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
+    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-model', 'publish-maps', 'publish-three', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
 });
 
 // default task

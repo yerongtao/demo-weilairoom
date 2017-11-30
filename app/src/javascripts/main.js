@@ -37,7 +37,7 @@
       $(".page-hx-xiangqing").css("display", "none");
     });
     $(".hx-btn-1").click(function() {
-      $(".hx-xq-2d").attr("src", "../images/ld/p02_02.png");
+      $(".hx-xq-2d").attr("src", "../images/ld/p01_02.png");
       $(".hx-xq-title").attr("src", "../images/ld/w01.png");
     });
     $(".hx-btn-2").click(function() {

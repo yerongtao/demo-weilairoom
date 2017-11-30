@@ -1,10 +1,10 @@
 .slide-4 {
     // background-color: #f8c32d;
-    background-image: url('../images/bg_p4.jpg');
+    background-image: url('../images/jzf/bg_03.png');
     background-size: cover;
-    .item-image {
-        width: 18rem;
-        height: 18rem;
+    .item-logo {
+        width: 15rem;
+        height: 4.9rem;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -13,18 +13,19 @@
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url('../images/jzf/hx_3.png');
+        background-image: url('../images/jzf/logo_th.png');
     }
     .item-text {
-        width: 18rem;
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: bold;
+        width: 100%;
+        height: 20rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
-        top: 24rem;
+        top: 13rem;
         left: 0;
         right: 0;
-        margin: 0 auto;
-        text-align: center;
+        margin: auto;
+        background-image: url('../images/jzf/bg_4_text.png');
     }
 }

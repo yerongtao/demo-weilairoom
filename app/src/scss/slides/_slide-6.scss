@@ -1,0 +1,18 @@
+.slide-6 {
+    // background-color: #9d1256;
+    background-image: url('../images/jzf/bg_03.png');
+    background-size: cover;
+    .item-image {
+        width: 100%;
+        height: 93.5%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url('../images/jzf/bg_6_map.png');
+    }
+}
