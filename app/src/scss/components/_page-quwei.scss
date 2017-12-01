@@ -11,10 +11,29 @@
         background-image: url('../images/ld_qwjt/qwbg1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        display: none;
         .qw-img {
             width: 100%;
             position: absolute;
             z-index: 1;
+            .qw-img-j {
+                width: 100%;
+                position: absolute;
+                z-index: 3;
+                display: none;
+            }
+            .qw-img-j.action {
+                display: block;
+            }
+            .qw-img-k {
+                width: 100%;
+                position: absolute;
+                z-index: 3;
+                display: none;
+            }
+            .qw-img-k.action {
+                display: block;
+            }
         }
         .qw-img-i {
             width: 100%;
@@ -56,19 +75,19 @@
             .btn-da-5 {
                 background-image: url('../images/ld_qwjt/sj5.png')
             }
-            .btn-da-1.active {
+            .btn-da-1.action {
                 background-image: url('../images/ld_qwjt/sj1h.png')
             }
-            .btn-da-2.active {
+            .btn-da-2.action {
                 background-image: url('../images/ld_qwjt/sj2h.png')
             }
-            .btn-da-3.active {
+            .btn-da-3.action {
                 background-image: url('../images/ld_qwjt/sj3h.png')
             }
-            .btn-da-4.active {
+            .btn-da-4.action {
                 background-image: url('../images/ld_qwjt/sj4h.png')
             }
-            .btn-da-5.active {
+            .btn-da-5.action {
                 background-image: url('../images/ld_qwjt/sj5h.png')
             }
             .qw-xiao-1 {
@@ -86,21 +105,53 @@
             .qw-xiao-5 {
                 background-image: url('../images/ld_qwjt/xsj5.png')
             }
-            .qw-xiao-1.active {
+            .qw-xiao-1.action {
                 background-image: url('../images/ld_qwjt/xsj1h.png')
             }
-            .qw-xiao-2.active {
+            .qw-xiao-2.action {
                 background-image: url('../images/ld_qwjt/xsj2h.png')
             }
-            .qw-xiao-3.active {
+            .qw-xiao-3.action {
                 background-image: url('../images/ld_qwjt/xsj3h.png')
             }
-            .qw-xiao-4.active {
+            .qw-xiao-4.action {
                 background-image: url('../images/ld_qwjt/xsj4h.png')
             }
-            .qw-xiao-5.active {
+            .qw-xiao-5.action {
                 background-image: url('../images/ld_qwjt/xsj5h.png')
             }
+        }
+    }
+    .qw-list.action{
+        display: block;
+    }
+    .qw-btn {
+        width: 50.34375vw;
+        position: absolute;
+        top: 59.474vh;
+        left: 24.828125vw;
+        z-index: 9;
+        a {
+            display: block;
+            width: 25vw;
+            height: 5.859375vw;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .qw-btn-1 {
+            background-image: url('../images/ld_qwjt/qw_da_btn.png');
+            float: left;
+        }
+        .qw-btn-2 {
+            background-image: url('../images/ld_qwjt/qw_xiao_btn.png');
+            float: right;
+        }
+        .qw-btn-1.action {
+            background-image: url('../images/ld_qwjt/qw_da_btn_h.png')
+        }
+        .qw-btn-2.action {
+            background-image: url('../images/ld_qwjt/qw_xiao_btn_h.png')
         }
     }
     .qw-da {

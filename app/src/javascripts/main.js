@@ -3,18 +3,13 @@
 
   // load dependencies
   var animationControl = require("./animation-control.js");
-  // load text.js
-  // var text = require('./text.js');
-  // load three.js
-  // var three = require('./lib/three.min.js');
-  // var stats = require('./lib/stats.min.js');
-  // var OBJLoader = require('./loader/OBJLoader.js');
-  // var MTLLoader = require('./loader/MTLLoader.js');
-  // var OrbitControls = require('./controls/OrbitControls.js');
-  // var hxXq3d = require('./hx-xq-3d.js');
+  var qwClickFun = require("./qw-click-fun.js");
 
   $(document).ready(function() {
     init();
+    // 区位交通page页面的点击操作
+    qwClickFun.qwBtnClick();
+    qwClickFun.qwBtnDX();
     // 下方导航 menu-main 的切换
     $(".menu-main").on("click", "li", function() {
       $(this)
