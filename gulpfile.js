@@ -107,6 +107,11 @@ gulp.task('publish-three', function () {
     return gulp.src('app/src/javascripts/**/*')
         .pipe(gulp.dest('app/dist/javascripts'));
 });
+// 添加vtour
+gulp.task('publish-vtour', function () {
+    return gulp.src('app/src/vtour/**/**/*')
+        .pipe(gulp.dest('app/dist/vtour'));
+});
 
 
 
@@ -187,6 +192,7 @@ gulp.task('watch', function () {
     gulp.watch('app/src/audios/**/*', ['publish-model']);
     gulp.watch('app/src/audios/**/*', ['publish-maps']);
     gulp.watch('app/src/audios/**/*', ['publish-three']);
+    gulp.watch('app/src/audios/**/*', ['publish-vtour']);
 
     gulp.watch('app/dist/index.html').on('change', browserSync.reload);
     gulp.watch('app/dist/javascripts/*').on('change', browserSync.reload);
@@ -208,7 +214,7 @@ gulp.task('clean-files', function(cb) {
 
 // development workflow task
 gulp.task('dev', function (cb) {
-    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-model', 'publish-maps', 'publish-three', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
+    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-model', 'publish-maps', 'publish-three', 'publish-vtour', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
 });
 
 // default task
