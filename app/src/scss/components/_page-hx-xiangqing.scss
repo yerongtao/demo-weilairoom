@@ -38,37 +38,21 @@
         position: absolute;
     }
     .hx-xq-btn {
-        width: 25%;
+        width: 35%;
         height: 6vw;
         top: 50%;
         left: 0;
         right: 0;
         margin: 0 auto;
         position: absolute;
-        background-image: url("../images/ld/qhbtn1.png");
+        background-image: url("../images/ld/btn_1.png");
         background-size: 100%;
         background-repeat: no-repeat;
-        // .hx-xq-btn-img {
-        //     height: 100%;
-        // }
+        display: flex;
         a{
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 50%;
             top: 0;
             z-index: 10;
-            
-        }
-        .btn-1 {
-            left: 0;
-            // background-color: rgb(40, 239, 0);
-            // color: #ffffff;
-        }
-        .btn-2 {
-            right: 0;
-            // background-color: #00efdb;
-            // color: #ffffff;
+            flex: 1;
         }
     }
     .hx-xq-back {

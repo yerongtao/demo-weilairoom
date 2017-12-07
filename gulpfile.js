@@ -189,15 +189,16 @@ gulp.task('watch', function () {
     gulp.watch('app/src/fonts/**/*', ['publish-fonts']);
     gulp.watch('app/src/images/**/*', ['publish-images']);
     gulp.watch('app/src/audios/**/*', ['publish-audios']);
-    gulp.watch('app/src/audios/**/*', ['publish-model']);
-    gulp.watch('app/src/audios/**/*', ['publish-maps']);
-    gulp.watch('app/src/audios/**/*', ['publish-three']);
-    gulp.watch('app/src/audios/**/*', ['publish-vtour']);
+    gulp.watch('app/src/model/**/*', ['publish-model']);
+    gulp.watch('app/src/maps/**/*', ['publish-maps']);
+    gulp.watch('app/src/three/**/*', ['publish-three']);
+    gulp.watch('app/src/vtour/**/*', ['publish-vtour']);
 
     gulp.watch('app/dist/index.html').on('change', browserSync.reload);
     gulp.watch('app/dist/javascripts/*').on('change', browserSync.reload);
     gulp.watch('app/dist/fonts/*').on('change', browserSync.reload);
     gulp.watch('app/dist/images/*').on('change', browserSync.reload);
+    gulp.watch('app/dist/vtour/*').on('change', browserSync.reload);
 });
 
 // delete files under app/dist

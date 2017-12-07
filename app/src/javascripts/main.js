@@ -19,7 +19,6 @@
         .siblings()
         .removeClass("action");
       var index = $(this).index();
-      // alert(index);
       $(".page")
         .eq(index)
         .addClass("action")
@@ -52,7 +51,7 @@
         .siblings()
         .removeClass("action");
       var index = $(this).index();
-      $(".hx-xq-btn").css("background-image", "url('../images/ld/qhbtn" + (index+1) + ".png')");
+      $(".hx-xq-btn").css("background-image", "url('../images/ld/btn_" + (index+1) + ".png')");
       $(".hx-xq")
         .eq(index)
         .addClass("action")

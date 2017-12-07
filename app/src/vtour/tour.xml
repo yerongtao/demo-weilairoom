@@ -100,6 +100,7 @@
 		);
 	);
 </action>
+
 <!-- 添加始终显示的文字 -->
 <action name="add_all_the_time_tooltip">
 	    txtadd(tooltipname, 'tooltip_', get(name));
@@ -148,7 +149,7 @@ visible="true"
 devices="html5" />
 
 <!-- 自定义地图 开始位置 -->
- <layer name="map_container" 
+<layer name="map_container" 
 	   keep="true" 
 	   align="lefttop" 
 	   url="skin/boxbg3.png"  
@@ -163,14 +164,15 @@ devices="html5" />
 	   />
 	   
 	<!-- 地图部分 url对应的是地图本身的路径，按照自己的文件修改url中数值 -->
-	<layer name="map" url="skin/camicon_map.png" keep="true" handcursor="false" 
-		   capture="false"
-	       align="lefttop"
-		   x="20"
-		   y="0"
-	       scale="0.25" scalechildren="true"
-	       onclick="openmap();"
-	       />
+<layer name="map" url="skin/camicon_map.png" keep="true" handcursor="false" 
+	   capture="false"
+	   align="lefttop"
+	   x="20"
+       y="0"
+	   scale="0.25" 
+	   scalechildren="true"
+	   onclick="openmap();"
+	   />
  <layer name="map_button" url="skin/map_2.png" keep="true" handcursor="false" 
 		   capture="false"
 	       align="lefttop"
