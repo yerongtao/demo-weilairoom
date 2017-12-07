@@ -45,9 +45,12 @@
         right: 0;
         margin: 0 auto;
         position: absolute;
-        .hx-xq-btn-img {
-            height: 100%;
-        }
+        background-image: url("../images/ld/qhbtn1.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        // .hx-xq-btn-img {
+        //     height: 100%;
+        // }
         a{
             display: block;
             position: absolute;
@@ -55,12 +58,17 @@
             width: 50%;
             top: 0;
             z-index: 10;
+            
         }
         .btn-1 {
             left: 0;
+            // background-color: rgb(40, 239, 0);
+            // color: #ffffff;
         }
         .btn-2 {
             right: 0;
+            // background-color: #00efdb;
+            // color: #ffffff;
         }
     }
     .hx-xq-back {

@@ -134,19 +134,75 @@
 	    set(plugin[get(tooltipname)].enabled,false);	
 </action>
 
+<!-- 自定义陀螺仪 -->
+<layer name="skin_btn_gyro_me"      
+url="skin/vtourskin.png" 
+crop="0|384|64|64"  
+align="rightcenter"  
+keep="true"     
+x="5" 
+y="-10"  
+scale="0.5" 
+onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));" 
+visible="true" 
+devices="html5" />
 
 <!-- 自定义地图 开始位置 -->
- 
+ <layer name="map_container" 
+	   keep="true" 
+	   align="lefttop" 
+	   url="skin/boxbg3.png"  
+	   capture="false"
+	   x="20"
+	   y="0"
+	   scale="0.25"   
+	   maskchildren="false" 
+	   scalechildren="True"  
+	   effect="dropshadow(1,45,0x000000,8,0.3);" 
+	   onloaded=""
+	   />
+	   
 	<!-- 地图部分 url对应的是地图本身的路径，按照自己的文件修改url中数值 -->
 	<layer name="map" url="skin/camicon_map.png" keep="true" handcursor="false" 
 		   capture="false"
 	       align="lefttop"
-		   x="0"
+		   x="20"
 		   y="0"
 	       scale="0.25" scalechildren="true"
 	       onclick="openmap();"
 	       />
- 
+ <layer name="map_button" url="skin/map_2.png" keep="true" handcursor="false" 
+		   capture="false"
+	       align="lefttop"
+		   state="opened"
+		   x="0" 
+		   y="2" 
+		   ox="0" 
+		   oy="0" 
+		   maskchildren="false" 
+	       scale="0.25" scalechildren="true"
+		   onclick="if(layer[map_button].state=='opened',
+			
+				    
+		             tween(layer[map].x,-200,0.5,easeOutElastic); 
+					 tween(layer[map_container].x,-200,0.5,easeOutElastic); 
+					 set(layer[map_button].url,skin/map_1.png);
+		             set(layer[map_button].state,closed);
+					 tween(layer[map_button].alpha,0.5);
+					 set(layer[map_button].onhover,tween(layer[map_show].alpha,1));
+					 set(layer[map_button].onout,tween(layer[map_show].alpha,0.5)),
+                     
+					 
+					 tween(layer[map].x,20,0.5,easeOutElastic); 
+					 tween(layer[map_container].x,20,0.5,easeOutElastic);            
+	                 set(layer[map_button].url,skin/map_2.png);
+	                 set(layer[map_button].state,opened);
+					 tween(layer[map_button].alpha,1);
+					 set(layer[map_button].onhover,NULL);
+					 set(layer[map_button].onout,NULL);
+					 
+					 ); "
+	       />
 	<!-- 地图打开部分 - 缩放到100% (如果屏幕小的话则可能更小) -->
 	<action name="openmap">
 		set(layer[map].onclick, closemap(); );
@@ -165,7 +221,7 @@
 		set(layer[map].onclick, openmap(); );
 		layer[map].changeorigin(lefttop,lefttop);
  
-		tween(layer[map].x, 0);
+		tween(layer[map].x, 20);
 		tween(layer[map].y, 0);
 		tween(layer[map].scale, 0.25);
 	</action>
@@ -194,7 +250,7 @@
 				set(layer[map].onclick, openmap(); );
 				layer[map].changeorigin(lefttop,lefttop);
  
-				set(layer[map].x, 0);
+				set(layer[map].x, 20);
 				set(layer[map].y, 0);
 				set(layer[map].scale, 0.25);
  

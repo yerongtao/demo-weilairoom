@@ -7,9 +7,11 @@
 
   $(document).ready(function() {
     init();
+
     // 区位交通page页面的点击操作
     qwClickFun.qwBtnClick();
     qwClickFun.qwBtnDX();
+
     // 下方导航 menu-main 的切换
     $(".menu-main").on("click", "li", function() {
       $(this)
@@ -17,13 +19,18 @@
         .siblings()
         .removeClass("action");
       var index = $(this).index();
-      // console.log(index);
-      $(".page").css("display", "none");
+      // alert(index);
       $(".page")
         .eq(index)
-        .css("display", "block");
+        .addClass("action")
+        .siblings()
+        .removeClass("action")
       $(".page-hx-xiangqing").css("display", "none");
+      if(index == 4) {
+        $(".tools-list").toggleClass("action");
+      }
     });
+
     // 户型鉴赏查看详情按钮打开户型鉴赏详情页
     $(".hx-btn").click(function() {
       $(".page-hx-xiangqing").css("display", "block");
@@ -31,27 +38,26 @@
     $(".hx-xq-back").click(function() {
       $(".page-hx-xiangqing").css("display", "none");
     });
-    $(".hx-btn-1").click(function() {
-      $(".hx-xq-2d").attr("src", "../images/ld/p01_02.png");
-      $(".hx-xq-title").attr("src", "../images/ld/w01.png");
+    //户型鉴赏页打开户型鉴赏详情页，切换图片
+    $(".page-huxing").on("click", ".hx-list", function() {
+      var index = $(this).index() + 1;
+      $(".hx-xq-2d").attr("src", "../images/ld/p0" + index + "_02.png");
+      $(".hx-xq-title").attr("src", "../images/ld/w0" + index + ".png");
     });
-    $(".hx-btn-2").click(function() {
-      $(".hx-xq-2d").attr("src", "../images/ld/p02_02.png");
-      $(".hx-xq-title").attr("src", "../images/ld/w02.png");
-    });
+
     //
     $(".hx-xq-btn").on("click", ".btn", function() {
       $(this)
         .addClass("action")
         .siblings()
         .removeClass("action");
-      var index = $(this).index() - 1;
+      var index = $(this).index();
+      $(".hx-xq-btn").css("background-image", "url('../images/ld/qhbtn" + (index+1) + ".png')");
       $(".hx-xq")
         .eq(index)
         .addClass("action")
         .siblings()
         .removeClass("action");
-      $(".hx-xq-btn-img").attr("src", "../images/ld/qhbtn" + (index + 1) + ".png");
     });
 
     var bgMusic = $("audio").get(0);

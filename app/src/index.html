@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Wechat H5 Boilerplate</title>
+    <title>微信demo</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
 
     <!-- Add your keywords and description here for SEO. -->
     <meta name="keywords" content="">
@@ -39,11 +40,11 @@
 
     <!-- 下方导航栏 menu-main -->
     <ul class="menu-main">
-        <li class="menu-li 3d-show action">
+        <li class="menu-li 3d-show">
             <i class="icon-1"></i>
             <span>全景鸟瞰</span>
         </li>
-        <li class="menu-li loushu-show">
+        <li class="menu-li loushu-show action">
             <i class="icon-2"></i>
             <span>楼书展示</span>
         </li>
@@ -62,10 +63,10 @@
     </ul>
 
     <!-- 全景鸟瞰 -->
-    <div class="page page-quanjing">
+    <div class="page page-quanjing ">
         <!-- <canvas ></canvas> -->
         <!-- <iframe id="quanjing-3d-show" src="http://www.360qjw.cn/oppo/index.html" frameborder="0"></iframe> -->
-        
+
         <!-- <div id="pano" style="width:100%;height:100%;">
             <noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
             <script>
@@ -74,9 +75,22 @@
         </div> -->
 
         <div id="pano" style="width:100%;height:100%;">
-            <noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+            <noscript>
+                <table style="width:100%;height:100%;">
+                    <tr style="vertical-align:middle;">
+                        <td>
+                            <div style="text-align:center;">ERROR:
+                                <br/>
+                                <br/>Javascript not activated
+                                <br/>
+                                <br/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </noscript>
             <script>
-                embedpano({swf:"vtour/tour.swf", xml:"vtour/tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+                embedpano({ swf: "vtour/tour.swf", xml: "vtour/tour.xml", target: "pano", html5: "auto", mobilescale: 1.0, passQueryParameters: true });
             </script>
         </div>
 
@@ -84,13 +98,13 @@
     </div>
 
     <!-- 楼书展示 swiper-container -->
-    <div class="page page-loushu swiper-container">
+    <div class="page page-loushu swiper-container action">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide-1">
-                <div class="item-logo animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0s"></div>
-                <div class="item-text animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="0s"></div>
                 <div class="item-image"></div>
                 <div class="item-slogan"></div>
+                <div class="item-logo animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0s"></div>
+                <div class="item-text animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="0.1s"></div>
             </div>
             <div class="swiper-slide slide-2">
                 <div class="item-image animated" data-ani-name="slideInLeft" data-ani-duration="1s" data-ani-delay="0s"></div>
@@ -137,12 +151,12 @@
             <img class="qw-img" src="../images/ld_qwjt/qw1tt1.png" alt="">
             <img class="qw-img-i" src="../images/ld_qwjt/qw1logo1.png" alt="">
             <div class="qw-img">
-                    <img class="qw-img-j action" src="../images/ld_qwjt/qw1lx1.png" alt="">
-                    <img class="qw-img-j" src="../images/ld_qwjt/qw1lx2.png" alt="">
-                    <img class="qw-img-j" src="../images/ld_qwjt/qw1lx3.png" alt="">
-                    <img class="qw-img-j" src="../images/ld_qwjt/qw1lx4.png" alt="">
-                    <img class="qw-img-j" src="../images/ld_qwjt/qw1lx5.png" alt="">
-                </div>
+                <img class="qw-img-j action" src="../images/ld_qwjt/qw1lx1.png" alt="">
+                <img class="qw-img-j" src="../images/ld_qwjt/qw1lx2.png" alt="">
+                <img class="qw-img-j" src="../images/ld_qwjt/qw1lx3.png" alt="">
+                <img class="qw-img-j" src="../images/ld_qwjt/qw1lx4.png" alt="">
+                <img class="qw-img-j" src="../images/ld_qwjt/qw1lx5.png" alt="">
+            </div>
             <img class="qw-text" src="../images/ld_qwjt/qw1tt2.png" alt="">
             <div class="qw-btn-d-x">
                 <a class="btn-da-1 action" href="javascript:void(0);"></a>
@@ -153,15 +167,15 @@
             </div>
         </div>
         <div class="qw-list qw-xiao">
-                <img class="qw-img" src="../images/ld_qwjt/qw2tt1_1.png" alt="">
-                <div class="qw-img">
-                    <img class="qw-img-k action" src="../images/ld_qwjt/qw2lx1.png" alt="">
-                    <img class="qw-img-k" src="../images/ld_qwjt/qw2lx2.png" alt="">
-                    <img class="qw-img-k" src="../images/ld_qwjt/qw2lx3.png" alt="">
-                    <img class="qw-img-k" src="../images/ld_qwjt/qw2lx4.png" alt="">
-                    <img class="qw-img-k" src="../images/ld_qwjt/qw2lx5.png" alt="">
-                </div>
-                <img class="qw-text" src="../images/ld_qwjt/qw2tt2.png" alt="">
+            <img class="qw-img" src="../images/ld_qwjt/qw2tt1_1.png" alt="">
+            <div class="qw-img">
+                <img class="qw-img-k action" src="../images/ld_qwjt/qw2lx1.png" alt="">
+                <img class="qw-img-k" src="../images/ld_qwjt/qw2lx2.png" alt="">
+                <img class="qw-img-k" src="../images/ld_qwjt/qw2lx3.png" alt="">
+                <img class="qw-img-k" src="../images/ld_qwjt/qw2lx4.png" alt="">
+                <img class="qw-img-k" src="../images/ld_qwjt/qw2lx5.png" alt="">
+            </div>
+            <img class="qw-text" src="../images/ld_qwjt/qw2tt2.png" alt="">
             <div class="qw-btn-d-x">
                 <a class="qw-xiao-1 action" href="javascript:void(0);"></a>
                 <a class="qw-xiao-2" href="javascript:void(0);"></a>
@@ -171,9 +185,9 @@
             </div>
         </div>
         <div class="qw-btn">
-                <a class="qw-btn-1 action" href="javascript:void(0);"></a>
-                <a class="qw-btn-2" href="javascript:void(0);"></a>
-            </div>
+            <a class="qw-btn-1 action" href="javascript:void(0);"></a>
+            <a class="qw-btn-2" href="javascript:void(0);"></a>
+        </div>
     </div>
 
     <!-- 户型鉴赏 -->
@@ -193,8 +207,11 @@
     </div>
 
     <!-- 辅助工具 -->
-    <div class="page page-tools">
-
+    <div class="page-tools">
+        <div class="tools-list">
+            <a class="tools-1" href="https://map.baidu.com/mobile/webapp/place/detail/qt=inf&uid=4642844a261407d9c8fa5f8a/shareurl=1&da_from=weixin&openna=1&t=1512627439&vt=map">一键导航</a>
+            <a class="tools-2" href="tel:10086">一键拨号</a>
+        </div>
     </div>
     <!-- 户型鉴赏详情 -->
     <div class="page-hx-xiangqing">
@@ -223,7 +240,7 @@
         </div>
         <img class="hx-xq-title" src="" alt="">
         <div class="hx-xq-btn">
-            <img class="hx-xq-btn-img" src="../images/ld/qhbtn1.png" alt="">
+            <!-- <img class="hx-xq-btn-img" src="../images/ld/qhbtn1.png" alt=""> -->
             <a class="btn btn-1 action" href="javascript:void(0);"></a>
             <a class="btn btn-2" href="javascript:void(0);"></a>
         </div>
@@ -236,7 +253,7 @@
     </button>
 
     <audio loop>
-        <source src="audios/background.mp3" type="audio/mpeg">
+        <!-- <source src="audios/Dreams.mp3" type="audio/mpeg"> -->
     </audio>
 
     <!-- Don't delete this. It's needed for development workflow. -->
