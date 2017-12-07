@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lazy</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img class="lazy" alt="" width="640" height="480" data-src="images\github-1.png" />
+    <img class="lazy" alt="" width="640" height="480" data-src="images\github-2.png" />
+    <img class="lazy" alt="" width="640" height="480" data-src="images\github-3.png" />
+    <img class="lazy" alt="" width="640" height="480" data-src="images\ld\bg_p1.jpg" />
+    <img class="lazy" alt="" width="640" height="480" data-src="images\ld\bg_p2.jpg" />
+    <img class="lazy" alt="" width="640" height="480" data-src="images\ld\bg_p3.jpg" />
+
+</body>
+    
+<!-- <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jquery.lazyload.js"></script>
+<script>
+    $(function() {
+        $("img.lazy").lazyload();
+    });
+</script> -->
+
+
+<script type="text/javascript">
+    
+            var imgs = document.querySelectorAll('img');
+    
+            //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+            function getTop(e) {
+                var T = e.offsetTop;
+                while(e = e.offsetParent) {
+                    T += e.offsetParent;
+                }
+                return T;
+            }
+    
+            function lazyLoad(imgs) {
+                var H = window.innerHeight;
+                var S = document.documentElement.scrollTop || document.body.scrollTop;
+                for (var i = 0; i < imgs.length; i++) {
+                    if (H + S > getTop(imgs[i])) {
+                        imgs[i].src = imgs[i].getAttribute('data-src');
+                    }
+                }
+            }
+    
+            window.onload = window.onscroll = function () {
+                lazyLoad(imgs);
+            }
+    
+    
+    //    var imgs = document.body.querySelectorAll('img'),
+    //        H = window.innerHeight;  //浏览器视窗高度
+    //    function lazyload() {
+    //        var S = document.documentElement.scrollTop || document.body.scrollTop;   //滚动条滚过高度
+    //        [].forEach.call(imgs, function (img) {
+    //            if (!img.getAttribute('data-src')) {
+    //                return
+    //            }  //已经替换过的跳过
+    //            if (H + S - 200 > getTop(img)) {    //为达到演示效果，这里H+S减去200，延后加载时机
+    //                img.src = img.getAttribute("data-src");
+    //                img.removeAttribute("data-src");
+    //            }
+    //        });
+    //        [].every.call(imgs, function (img) {
+    //            return !img.getAttribute('data-src')
+    //        }) && (window.removeEventListener("scroll", lazyload, false));   //完成所有替换后注销事件
+    //
+    //    }
+    //
+    //    window.addEventListener("scroll", lazyload, false);
+    //    window.addEventListener("load", lazyload, false);
+    //
+    //    function getTop(e) {
+    //        var T = e.offsetTop;
+    //        while (e = e.offsetParent) {
+    //            T += e.offsetTop
+    //        }
+    //        return T
+    //    }
+    
+    
+    </script>
+    
+    作者：MatthewMaYao
+    链接：http://www.jianshu.com/p/9b30b03f56c2
+    來源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+</html>
