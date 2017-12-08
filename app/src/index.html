@@ -63,7 +63,7 @@
     </ul>
 
     <!-- 全景鸟瞰 -->
-    <div class="page page-quanjing ">
+    <div class="page page-quanjing">
         <!-- <canvas ></canvas> -->
         <!-- <iframe id="quanjing-3d-show" src="http://www.360qjw.cn/oppo/index.html" frameborder="0"></iframe> -->
 
@@ -261,6 +261,39 @@
     <!-- inject:js -->
     <!-- endinject -->
 
+    <!-- 点击操作 -->
+    <script type="text/javascript">
+        $(function () {
+            // 菜单高亮
+            $(".menu-main li").click(function () {
+                clickMainMenu(this);
+            });
+            $(".page-huxing .hx-list").click(function () {
+                clickHxList(this);
+            });
+        });
+
+    </script>
+    <script>
+        // 点击下方菜单触发的函数
+        function clickMainMenu(menuItem) {
+            $(menuItem).addClass("action").siblings("li").removeClass("action");
+            var index = $(menuItem).index();
+            $(".page").eq(index).addClass("action").siblings().removeClass("action");
+            $(".page-hx-xiangqing").css("display", "none");
+            if (index == 4) {
+                $(".tools-list").toggleClass("action");
+            }
+        }
+        // 户型鉴赏 - 查看详情 打开户型详情页
+        function clickHxList(item) {
+            var index = $(item).index() + 1;
+            // alert(index);
+            $(".hx-xq-2d").attr("src", "../images/ld/p0" + index + "_02.png");
+            $(".hx-xq-title").attr("src", "../images/ld/w0" + index + ".png");
+        }
+
+    </script>
     <script type="text/javascript" src="javascripts/three/lib/three.min.js"></script>
     <!-- <script type="text/javascript" src="javascripts/three/lib/stats.min.js"></script> -->
     <script type="text/javascript" src="javascripts/three/loader/OBJLoader.js"></script>

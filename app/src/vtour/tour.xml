@@ -188,7 +188,7 @@ devices="html5" />
 				    
 		             tween(layer[map].x,-200,0.5,easeOutElastic); 
 					 tween(layer[map_container].x,-200,0.5,easeOutElastic); 
-					 set(layer[map_button].url,skin/map_1.png);
+					 set(layer[map_button].url,./vtour/skin/map_1.png);
 		             set(layer[map_button].state,closed);
 					 tween(layer[map_button].alpha,0.5);
 					 set(layer[map_button].onhover,tween(layer[map_show].alpha,1));
@@ -197,7 +197,7 @@ devices="html5" />
 					 
 					 tween(layer[map].x,20,0.5,easeOutElastic); 
 					 tween(layer[map_container].x,20,0.5,easeOutElastic);            
-	                 set(layer[map_button].url,skin/map_2.png);
+	                 set(layer[map_button].url,./vtour/skin/map_2.png);
 	                 set(layer[map_button].state,opened);
 					 tween(layer[map_button].alpha,1);
 					 set(layer[map_button].onhover,NULL);
