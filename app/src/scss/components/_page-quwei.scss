@@ -54,42 +54,46 @@
             z-index: 9;
             a {
                 display: block;
+
                 width: 100%;
                 height: 5.859375vw;
+               
                 margin-bottom: 1.33928571vh;
-                background-repeat: no-repeat;
-                background-size: contain;
+                background: url('../images/qw.png');
+                background-position: 0 0;
+                // background-repeat: no-repeat;
+                // background-size: contain;
             }
-            .btn-da-1 {
-                background-image: url('../images/ld_qwjt/sj1.png')
-            }
-            .btn-da-2 {
-                background-image: url('../images/ld_qwjt/sj2.png')
-            }
-            .btn-da-3 {
-                background-image: url('../images/ld_qwjt/sj3.png')
-            }
-            .btn-da-4 {
-                background-image: url('../images/ld_qwjt/sj4.png')
-            }
-            .btn-da-5 {
-                background-image: url('../images/ld_qwjt/sj5.png')
-            }
-            .btn-da-1.action {
-                background-image: url('../images/ld_qwjt/sj1h.png')
-            }
-            .btn-da-2.action {
-                background-image: url('../images/ld_qwjt/sj2h.png')
-            }
-            .btn-da-3.action {
-                background-image: url('../images/ld_qwjt/sj3h.png')
-            }
-            .btn-da-4.action {
-                background-image: url('../images/ld_qwjt/sj4h.png')
-            }
-            .btn-da-5.action {
-                background-image: url('../images/ld_qwjt/sj5h.png')
-            }
+            // .btn-da-1 {
+            //     background-position: 0 0;
+            // }
+            // .btn-da-2 {
+            //     background-position: 0 0;
+            // }
+            // .btn-da-3 {
+            //     background-image: url('../images/ld_qwjt/sj3.png')
+            // }
+            // .btn-da-4 {
+            //     background-image: url('../images/ld_qwjt/sj4.png')
+            // }
+            // .btn-da-5 {
+            //     background-image: url('../images/ld_qwjt/sj5.png')
+            // }
+            // .btn-da-1.action {
+            //     background-image: url('../images/ld_qwjt/sj1h.png')
+            // }
+            // .btn-da-2.action {
+            //     background-image: url('../images/ld_qwjt/sj2h.png')
+            // }
+            // .btn-da-3.action {
+            //     background-image: url('../images/ld_qwjt/sj3h.png')
+            // }
+            // .btn-da-4.action {
+            //     background-image: url('../images/ld_qwjt/sj4h.png')
+            // }
+            // .btn-da-5.action {
+            //     background-image: url('../images/ld_qwjt/sj5h.png')
+            // }
             .qw-xiao-1 {
                 background-image: url('../images/ld_qwjt/xsj1.png')
             }
@@ -106,7 +110,7 @@
                 background-image: url('../images/ld_qwjt/xsj5.png')
             }
             .qw-xiao-1.action {
-                background-image: url('../images/ld_qwjt/xsj1h.png')
+                background-position: 0 198;
             }
             .qw-xiao-2.action {
                 background-image: url('../images/ld_qwjt/xsj2h.png')

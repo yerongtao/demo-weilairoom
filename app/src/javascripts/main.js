@@ -6,12 +6,15 @@
   var qwClickFun = require("./qw-click-fun.js");
 
   $(document).ready(function() {
-    init();
+    
 
     // 区位交通page页面的点击操作
     qwClickFun.qwBtnClick();
     qwClickFun.qwBtnDX();
 
+    $("#btn-2").click(function(){
+      init();
+    });
     
     // 下方导航 menu-main 的切换
     // $(".menu-main").on("click", "li", function() {
