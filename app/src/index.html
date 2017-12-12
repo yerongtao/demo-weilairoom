@@ -15,6 +15,7 @@
     <!-- Add your keywords and description here for SEO. -->
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <!-- <link rel="stylesheet" href="./stylesheets/style.css"> -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 
     <!-- Uncomment this if you need apple touch icon. -->
@@ -40,11 +41,11 @@
 
     <!-- 下方导航栏 menu-main -->
     <ul class="menu-main">
-        <li class="menu-li 3d-show">
+        <li class="menu-li 3d-show action">
             <i class="icon-1"></i>
             <span>全景鸟瞰</span>
         </li>
-        <li class="menu-li loushu-show action">
+        <li class="menu-li loushu-show">
             <i class="icon-2"></i>
             <span>楼书展示</span>
         </li>
@@ -63,17 +64,7 @@
     </ul>
 
     <!-- 全景鸟瞰 -->
-    <div class="page page-quanjing">
-        <!-- <canvas ></canvas> -->
-        <!-- <iframe id="quanjing-3d-show" src="http://www.360qjw.cn/oppo/index.html" frameborder="0"></iframe> -->
-
-        <!-- <div id="pano" style="width:100%;height:100%;">
-            <noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
-            <script>
-                embedpano({swf:"vtour/tour.swf", xml:"vtour/tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
-            </script>
-        </div> -->
-
+    <div class="page page-quanjing action">
         <div id="pano" style="width:100%;height:100%;">
             <noscript>
                 <table style="width:100%;height:100%;">
@@ -94,11 +85,31 @@
             </script>
         </div>
 
+        <!-- <div id="pano" style="width:100%;height:100%;">
+            <noscript>
+                <table style="width:100%;height:100%;">
+                    <tr style="vertical-align:middle;">
+                        <td>
+                            <div style="text-align:center;">ERROR:
+                                <br/>
+                                <br/>Javascript not activated
+                                <br/>
+                                <br/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </noscript>
+            <script>
+                embedpano({ swf: "vtour/tour.swf", xml: "vtour/tour.xml", target: "pano", html5: "auto", mobilescale: 1.0, passQueryParameters: true });
+            </script>
+        </div> -->
+
 
     </div>
 
     <!-- 楼书展示 swiper-container -->
-    <div class="page page-loushu swiper-container action">
+    <div class="page page-loushu swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide-1">
                 <div class="item-image"></div>
@@ -148,6 +159,7 @@
     <!-- 区位交通 -->
     <div class="page page-quwei">
         <div class="qw-list qw-da action">
+            <i class="icon-qwsj1"></i>
             <img class="qw-img" src="../images/ld_qwjt/qw1tt1.png" alt="">
             <img class="qw-img-i" src="../images/ld_qwjt/qw1logo1.png" alt="">
             <div class="qw-img">
@@ -251,6 +263,8 @@
 
     <button class="btn-music">
         <i class="icon-note"></i>
+        <!-- <i class="icon-5"></i> -->
+
     </button>
 
     <audio loop>
