@@ -1,15 +1,99 @@
 @charset "UTF-8";
 
 .page-quanjing {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  // background-color: #1f4d3d;
+  #quanjing-3d-show {
+    width: 100%;
+    height: 100%;
+    // bottom: 66px;
+    position: absolute;
+    // background-color: #444;
+  }
+  .guwen-btn {
+    top: 39%;
+    right: 0.5rem;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-image: url("../../images/steven.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 999;
+  }
+  .guwen-bg {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: #1f4d3d;
-    #quanjing-3d-show {
-        width: 100%;
-        height: 100%;
-        // bottom: 66px;
+    // background-color: #b18d8d7c;
+    z-index: 999999;
+    display: none;
+    .guwen {
+      width: 75%;
+      height: 150px;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 99999999;
+      background-color: rgba($color: #222222, $alpha: 0.8);
+      #back-icon {
+        top: 0.2rem;
+        right: 0.5rem;
         position: absolute;
-        background-color: #444;
+        color: #efefef;
+      }
+      .gw-user {
+        width: 90%;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+        .gw-user-img {
+          top: 0.5rem;
+          left: 0.5rem;
+          position: relative;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          background-image: url("../../images/steven.jpg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        .gw-user-text {
+          top: 0.5rem;
+          left: 5.5rem;
+          position: absolute;
+          .user-name {
+            font-size: 18px;
+            margin: 4px;
+            color: #ffffff;
+          }
+          .user-info {
+            font-size: 13px;
+            margin: 4px;
+            color: #d6d5d5;
+          }
+        }
+      }
+      .gw-message {
+        width: 95%;
+        height: 90px;
+        position: relative;
+        margin: 0 auto;
+        .gw-message-list {
+          color: #ffffff;
+          padding: 5px;
+          margin-top: 8px;
+        }
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
     }
+  }
 }

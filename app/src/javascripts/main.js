@@ -6,40 +6,9 @@
   var qwClickFun = require("./qw-click-fun.js");
 
   $(document).ready(function() {
-    
-
     // 区位交通page页面的点击操作
     qwClickFun.qwBtnClick();
     qwClickFun.qwBtnDX();
-
-    $("#btn-2").click(function(){
-      init();
-    });
-    
-    // 下方导航 menu-main 的切换
-    // $(".menu-main").on("click", "li", function() {
-    //   $(this).addClass("action").siblings().removeClass("action");
-    //   var index = $(this).index();
-    //   $(".page").eq(index).addClass("action").siblings().removeClass("action");
-    //   $(".page-hx-xiangqing").css("display", "none");
-    //   if (index == 4) {
-    //     $(".tools-list").toggleClass("action");
-    //   }
-    // });
-
-    // 户型鉴赏查看详情按钮打开户型鉴赏详情页
-    $(".hx-btn").click(function() {
-      $(".page-hx-xiangqing").css("display", "block");
-    });
-    $(".hx-xq-back").click(function() {
-      $(".page-hx-xiangqing").css("display", "none");
-    });
-    // //户型鉴赏页打开户型鉴赏详情页，切换图片
-    // $(".page-huxing").on("click", ".hx-list", function() {
-    //   var index = $(this).index() + 1;
-    //   $(".hx-xq-2d").attr("src", "../images/ld/p0" + index + "_02.png");
-    //   $(".hx-xq-title").attr("src", "../images/ld/w0" + index + ".png");
-    // });
 
     //
     $(".hx-xq-btn").on("click", ".btn", function() {
@@ -80,6 +49,8 @@
       effect: "coverflow", // slide, fade, coverflow or flip
       speed: 400,
       direction: "vertical",
+      observer:true,//修改swiper自己或子元素时，自动初始化swiper
+      observeParents:true,//修改swiper的父元素时，自动初始化swiper
       fade: {
         crossFade: false
       },
@@ -121,5 +92,8 @@
     // hide loading animation since everything is ready
     // 通过使用滑动效果，隐藏被选元素，如果元素已显示出来的话。
     $(".loading-overlay").slideUp();
+
+    show3Dinit(1);
+
   });
 })();

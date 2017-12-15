@@ -5,8 +5,26 @@
     height: 100%;
     position: absolute;
     // background-color: #9f3d3d
-    background-image: url('../images/ld/bg_hxlist.jpg');
+    background-image: url('../images/ld/bg_hxlist.png');
     background-size: contain;
+    .hx-list-btn {
+        width: 95%;
+        height: 12rem;
+        top: 40%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        background-image: url('../images/image-db02a1.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        a{
+            top: 0;
+            z-index: 10;
+            flex: 1;
+        }
+    }
     .hx-list {
         display: block;
         position: absolute;

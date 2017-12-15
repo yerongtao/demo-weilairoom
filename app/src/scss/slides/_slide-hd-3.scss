@@ -1,0 +1,30 @@
+.slide-hd-3 {
+    background-image: url('../images/jzf/bg_01.png');
+    background-size: cover;
+    .item-text {
+        width: 21rem;
+        height: 10rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 12rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url('../images/jzf/bg_01_text.png');
+    }
+    .item-image {
+        width: 17rem;
+        height: 21rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 3rem;
+        margin: auto;
+        background-image: url('../images/jzf/bg_01_img.png');
+    }
+}

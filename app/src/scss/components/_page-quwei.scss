@@ -55,71 +55,71 @@
             a {
                 display: block;
                 width: 60px;
-                height: 22px;
+                height: 23px;
                 margin-bottom: 0.5rem;
                 background: url('../images/qw_1.png');
                 // background-position: 0 0;
-                background-size: 120px 230px;
+                background-size: 120px 234px;
             }
             a:last-child {
                 margin-bottom: 0;
             }
             .btn-da-1 {
-                background-position: 60px 88px;
+                background-position: 60px 23px;
             }
             .btn-da-2 {
-                background-position: 60px 66px;
+                background-position: 60px 46px;
             }
             .btn-da-3 {
-                background-position: 60px 44px;
+                background-position: 60px 70px;
             }
             .btn-da-4 {
-                background-position: 60px 22px;
+                background-position: 60px 94px;
             }
             .btn-da-5 {
-                background-position: 60px 0;
+                background-position: 60px 117px;
             }
             .btn-da-1.action {
-                background-position: 0 88px;
+                background-position: 0 23px;
             }
             .btn-da-2.action {
-                background-position: 0 66px;
+                background-position: 0 46px;
             }
             .btn-da-3.action {
-                background-position: 0 44px;
+                background-position: 0 70px;
             }
             .btn-da-4.action {
-                background-position: 0 22px;
+                background-position: 0 94px;
             }
             .btn-da-5.action {
-                background-position: 0 0px;
+                background-position: 0 117px;
             }
             .qw-xiao-1 {
-                background-position: 60px 198px;
+                background-position: 60px 141px;
             }
             .qw-xiao-2 {
-                background-position: 60px 176px;
+                background-position: 60px 164px;
             }
             .qw-xiao-3 {
-                background-position: 60px 154px;
+                background-position: 60px 187px;
             }
             .qw-xiao-4 {
-                background-position: 60px 132px;
+                background-position: 60px 211px;
             }
             .qw-xiao-5 {
                 background-position: 60px 0;
             }
             .qw-xiao-1.action {
-                background-position: 0 198px;
+                background-position: 0 141px;
             }
             .qw-xiao-2.action {
-                background-position: 0 176px;
+                background-position: 0 164px;
             }
             .qw-xiao-3.action {
-                background-position: 0 154px;
+                background-position: 0 187px;
             }
             .qw-xiao-4.action {
-                background-position: 0 132px;
+                background-position: 0 211px;
             }
             .qw-xiao-5.action {
                 background-position: 0 0;
@@ -130,15 +130,18 @@
         display: block;
     }
     .qw-btn {
-        width: 50.34375vw;
+        width: 60%;
+        top: 55%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;    
         position: absolute;
-        top: 59.474vh;
-        left: 24.828125vw;
         z-index: 9;
+        display: flex;
         a {
             display: block;
-            width: 25vw;
-            height: 5.859375vw;
+            flex: 1;
+            height: 1.6rem;
             overflow: hidden;
             background-repeat: no-repeat;
             background-size: contain;

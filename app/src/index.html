@@ -65,6 +65,28 @@
 
     <!-- 全景鸟瞰 -->
     <div class="page page-quanjing action">
+        <div class="guwen-btn" id="guwen-btn"></div>
+        <div class="guwen-bg" id="guwen-bg">
+            <div class="guwen">
+                <div class="gw-user">
+                    <div class="gw-user-img"></div>
+                    <div class="gw-user-text">
+                        <p class="user-name">Steven</p>
+                        <p class="user-info">置业顾问</p>
+                    </div>
+                </div>
+                <div class="gw-message">
+                    <div class="gw-message-list">
+                        <i class="icon-phone"></i>
+                        <a href="tel:1511791993">1511791993</a>
+                    </div>
+                    <div class="gw-message-list">
+                        <i class="icon-envelop"></i>
+                        <a href="tel:1511791993">lixiaoguang@weilairoom.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="pano" style="width:100%;height:100%;">
             <noscript>
                 <table style="width:100%;height:100%;">
@@ -111,7 +133,16 @@
     <!-- 楼书展示 swiper-container -->
     <div class="page page-loushu swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slide-1">
+            <div class="swiper-slide slide-hd-0"></div>
+            <div class="swiper-slide slide-hd-1">
+                <div class="item-text animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0.1s"></div>
+                <div class="item-image"></div>
+            </div>
+            <div class="swiper-slide slide-hd-2">
+                <div class="item-text animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0.1s"></div>
+                <div class="item-image"></div>
+            </div>
+            <!-- <div class="swiper-slide slide-1">
                 <div class="item-image"></div>
                 <div class="item-slogan"></div>
                 <div class="item-logo animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0s"></div>
@@ -149,7 +180,7 @@
                 <div class="item-logo animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="0s"></div>
                 <div class="item-text animated" data-ani-name="slideInUp" data-ani-duration="1s" data-ani-delay="0s"></div>
                 <div class="item-hx animated" data-ani-name="pulse" data-ani-duration="1s" data-ani-delay="0s"></div>
-            </div>
+            </div> -->
         </div>
         <button class="up-arrow">
             <i class="icon-angle-double-up"></i>
@@ -204,7 +235,7 @@
 
     <!-- 户型鉴赏 -->
     <div class="page page-huxing">
-        <div class="hx-list hx-1">
+        <!-- <div class="hx-list hx-1">
             <img class="hx-bg" src="../images/ld/hx1.jpg" alt="">
             <a class="hx-btn hx-btn-1" href="javascript:void(0);">
                 <img src="../images/ld/xiangqi.png" alt="">
@@ -215,6 +246,11 @@
             <a class="hx-btn hx-btn-2" href="javascript:void(0);">
                 <img src="../images/ld/xiangqi.png" alt="">
             </a>
+        </div> -->
+        <div class="hx-list-btn">
+            <a class="list-btn" id="list-btn-1" href="javascript:void(0);"></a>
+            <a class="list-btn" id="list-btn-2" href="javascript:void(0);"></a>
+            <a class="list-btn" id="list-btn-3" href="javascript:void(0);"></a>
         </div>
     </div>
 
@@ -249,6 +285,27 @@
                 </div>
 
             </div>
+            <div class="hx-xq" id="add-pano1">
+                <div id="pano1" style="width:100%;height:100%;">
+                    <noscript>
+                        <table style="width:100%;height:100%;">
+                            <tr style="vertical-align:middle;">
+                                <td>
+                                    <div style="text-align:center;">ERROR:
+                                        <br/>
+                                        <br/>Javascript not activated
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </noscript>
+                    <!-- <script>
+                        embedpano({ swf: "vtour/tour3.swf", xml: "vtour/tour3.xml", target: "pano1", html5: "auto", mobilescale: 1.0, passQueryParameters: true });
+                    </script> -->
+                </div>
+            </div>
         </div>
         <img class="hx-xq-title" src="" alt="">
         <div class="hx-xq-btn">
@@ -282,9 +339,24 @@
             $(".menu-main li").click(function () {
                 clickMainMenu(this);
             });
-            $(".page-huxing .hx-list").click(function () {
+            // 户型鉴赏点击操作
+            $(".page-huxing .list-btn").click(function () {
+                $(".page-hx-xiangqing").css("display", "block");
+                $(".hx-xq").eq(0).addClass("action").siblings().removeClass("action");
+                $(".btn").eq(0).addClass("action").siblings().removeClass("action");
+                $(".hx-xq-btn").css("background-image", "url('../images/ld/btn_1.png')");
                 clickHxList(this);
             });
+            // 户型鉴赏详情关闭按钮操作
+            $(".hx-xq-back").click(function () {
+                $(".page-hx-xiangqing").css("display", "none");
+            });
+            $("#guwen-btn").click(function () {
+                $("#guwen-bg").css("display", "block");
+            })
+            $("#guwen-bg").click(function () {
+                $("#guwen-bg").css("display", "none");
+            })
         });
 
     </script>
@@ -294,18 +366,24 @@
             $(menuItem).addClass("action").siblings("li").removeClass("action");
             var index = $(menuItem).index();
             $(".page").eq(index).addClass("action").siblings().removeClass("action");
-            $(".page-hx-xiangqing").css("display", "none");
             if (index == 4) {
                 $(".tools-list").toggleClass("action");
-            }
+            } else $(".page-hx-xiangqing").css("display", "none");
         }
         // 户型鉴赏 - 查看详情 打开户型详情页
         function clickHxList(item) {
             var index = $(item).index() + 1;
             // alert(index);
-            $(".hx-xq-2d").attr("src", "../images/ld/p0" + index + "_02.png");
+            $(".hx-xq-2d").attr("src", "../images/hd/hx-" + index + ".png");
             $(".hx-xq-title").attr("src", "../images/ld/w0" + index + ".png");
+            addScript(index);
+            show3Dinit(index);
         }
+        function addScript(index) {
+                // alert(index);
+                // $("#add-pano1").html("<div id='pano1' style='width:100%;height:100%;'><noscript><table style='width:100%;height:100%;'><tr style='vertical-align:middle;'><td><div style='text-align:center;'>ERROR:<br/><br/>Javascript not activated<br/><br/><\/div><\/td><\/tr><\/table><\/noscript><script>embedpano({ swf: 'vtour/tour" + index +".swf', xml: 'vtour/tour" + index +".xml', target: 'pano1', html5: 'auto', mobilescale: 1.0, passQueryParameters: true });<\/script><\/div>");
+                $("#pano1").html("<script>embedpano({ swf: 'vtour/tour" + index + ".swf', xml: 'vtour/tour" + index + ".xml', target: 'pano1', html5: 'auto', mobilescale: 1.0, passQueryParameters: true })<\/script>");
+            }
 
     </script>
     <script type="text/javascript" src="javascripts/three/lib/three.min.js"></script>

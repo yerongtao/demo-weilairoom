@@ -1,6 +1,6 @@
 // var $ = require('jquery');
 
-function init() {
+function show3Dinit(iItem) {
     
         // alert("function init()");
         var width = window.innerWidth;
@@ -38,13 +38,13 @@ function init() {
        
     
         // 贴图（texture loader）
-        var tLoader = new THREE.TextureLoader();
-        var textureFloor = tLoader.load('images/floor.jpg', function() {
-            renderer.render(scene, camera);
-        });
-        textureFloor.wrapS = THREE.RepeatWrapping;
-        textureFloor.wrapT = THREE.RepeatWrapping;
-        textureFloor.repeat.set(6, 8);
+        // var tLoader = new THREE.TextureLoader();
+        // var textureFloor = tLoader.load('images/floor.jpg', function() {
+        //     renderer.render(scene, camera);
+        // });
+        // textureFloor.wrapS = THREE.RepeatWrapping;
+        // textureFloor.wrapT = THREE.RepeatWrapping;
+        // textureFloor.repeat.set(6, 8);
     
         // 汽车模型（model）
         var car;
@@ -54,12 +54,14 @@ function init() {
         var proWrap = document.getElementById('progress-wrap');
     
         var mtlLoader = new THREE.MTLLoader();
-        mtlLoader.load('model/xiaotao.mtl', function(materials) {
+        // mtlLoader.load('model/HX_0' + iItem +'.mtl', function(materials) {
+            mtlLoader.load('model/C.mtl', function(materials) {
             var objLoader = new THREE.OBJLoader();//创建loader变量，用于导入模型
             objLoader.setMaterials(materials);
             //第一个表示模型路径，第二个表示完成导入后的回调函数
             //一般我们需要在这个回调函数中将导入的模型添加到场景中
-            objLoader.load('model/xiaotao.obj', function(obj) {
+            // objLoader.load('model/HX_0' + iItem + '.obj', function(obj) {
+                objLoader.load('model/C.obj', function(obj) {
                 obj.traverse(function(child) {
                     if (child instanceof THREE.Mesh) {
                         child.material.side = THREE.DoubleSide;

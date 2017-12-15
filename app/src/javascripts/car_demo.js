@@ -15,9 +15,9 @@ window.onload = function() {
 //   camera.lookAt(new THREE.Vector3(0, -0.5, 0));
 
 // position and point the camera to the center of the scene
-camera.position.x = 300;
-camera.position.y = 400;
-camera.position.z = 500;
+camera.position.x = 3000;
+camera.position.y = 4000;
+camera.position.z = 5000;
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 
 
@@ -60,12 +60,12 @@ camera.lookAt(new THREE.Vector3(0, 0, 0));
     // 汽车模型（model）
     var car;
     var mtlLoader = new THREE.MTLLoader();
-    mtlLoader.load('model/xiaotao.mtl', function(materials) {
+    mtlLoader.load('model/C.mtl', function(materials) {
         var objLoader = new THREE.OBJLoader();//创建loader变量，用于导入模型
         objLoader.setMaterials(materials);
         //第一个表示模型路径，第二个表示完成导入后的回调函数
         //一般我们需要在这个回调函数中将导入的模型添加到场景中
-        objLoader.load('model/xiaotao.obj', function(obj) {
+        objLoader.load('model/C.obj', function(obj) {
             obj.traverse(function(child) {
                 if (child instanceof THREE.Mesh) {
                     child.material.side = THREE.DoubleSide;
