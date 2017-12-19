@@ -99,7 +99,7 @@ gulp.task('publish-model', function () {
 });
 // 添加贴图
 gulp.task('publish-maps', function () {
-    return gulp.src('app/src/maps/*')
+    return gulp.src('app/src/maps/**/*')
         .pipe(gulp.dest('app/dist/maps'));
 });
 // 添加three

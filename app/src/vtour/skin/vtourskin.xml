@@ -230,7 +230,7 @@
 	       />
 
 	<!-- skin_thumbtext_style - style/textfield for the (optional, skin_settings.thumbs_text) thumbnails texts -->
-	<style name="skin_thumbtext_style" type="text" align="bottom" width="100%" y="5" enabled="false" background="false" border="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:10px;'" textshadow="get:skin_settings.design_text_shadow" />
+	<style name="skin_thumbtext_style" type="text" align="bottom" width="100%" y="0" enabled="false" backgroundcolor="0x222222" backgroundalpha="0.6" border="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:10px;'" textshadow="get:skin_settings.design_text_shadow" />
 
 	<!-- skin_hotspotstyle - style for the hotspots -->
 	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" scale="0.5" edge="top" distorted="true"

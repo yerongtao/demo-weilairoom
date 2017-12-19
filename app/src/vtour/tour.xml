@@ -16,12 +16,12 @@
 				   littleplanetintro="true" 
 				   title="true" 
 				   thumbs="true" 
-				   thumbs_width="120" 
-				   thumbs_height="80" 
-				   thumbs_padding="10" 
+				   thumbs_width="90" 
+				   thumbs_height="65" 
+				   thumbs_padding="8" 
 				   thumbs_crop="0|40|240|160" 
 				   thumbs_opened="false" 
-				   thumbs_text="false" 
+				   thumbs_text="true" 
 				   thumbs_dragging="true" 
 				   thumbs_onhoverscrolling="false" 
 				   thumbs_scrollbuttons="false" 
@@ -42,15 +42,15 @@
 				   controlbar_height="40" 
 				   controlbar_offset="26" 
 				   controlbar_offset_closed="-40" 
-				   controlbar_overlap.no-fractionalscaling="1"
+				   controlbar_overlap.no-fractionalscaling="0"
 				   controlbar_overlap.fractionalscaling="0" 
 				   design_skin_images="vtourskin.png" 
 				   design_bgcolor="0x333333" 
-				   design_bgalpha="0.5" 
+				   design_bgalpha="0.7" 
 				   design_bgborder="0" 
 				   design_bgroundedge="1" 
 				   design_bgshadow="0 4 10 0x000000 0.3" 
-				   design_thumbborder_bgborder="3 0xFFFFFF 1.0" 
+				   design_thumbborder_bgborder="2 0xFF8000 0.8" 
 				   design_thumbborder_padding="2" 
 				   design_thumbborder_bgroundedge="0" 
 				   design_text_css="color:#FFFFFF; font-family:Arial;" 
@@ -92,9 +92,8 @@
 			clearinterval(calc('crop_anim_' + caller.name));
 		);
 	);
-
-	
 	</action>
+	
 	<!-- 添加始终显示的文字 -->
 	<action name="add_all_the_time_tooltip">
 	    txtadd(tooltipname, 'tooltip_', get(name));
@@ -127,6 +126,12 @@
 	    copy(plugin[get(tooltipname)].html,text)
 	    );    	    set(plugin[get(tooltipname)].enabled,false);	
 </action>
+
+	<!-- 自定义设置按钮 -->
+	<layer name="skin_btn_exit" url="skin/vtourskin.png" crop="0|384|64|64" align="rightcenter" 
+	keep="true" x="5" y="-100" scale="0.5" 
+	onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));" 
+	visible="true" devices="html5" />
 	<!-- 自定义陀螺仪 -->
 	<layer name="skin_btn_gyro_me" url="skin/vtourskin.png" crop="0|384|64|64" align="rightcenter" 
 	keep="true" x="5" y="-10" scale="0.5" 

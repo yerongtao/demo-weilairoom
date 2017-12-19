@@ -55,13 +55,13 @@ function show3Dinit(iItem) {
     
         var mtlLoader = new THREE.MTLLoader();
         // mtlLoader.load('model/HX_0' + iItem +'.mtl', function(materials) {
-            mtlLoader.load('model/C.mtl', function(materials) {
+            mtlLoader.load('model/HX_01.mtl', function(materials) {
             var objLoader = new THREE.OBJLoader();//创建loader变量，用于导入模型
             objLoader.setMaterials(materials);
             //第一个表示模型路径，第二个表示完成导入后的回调函数
             //一般我们需要在这个回调函数中将导入的模型添加到场景中
             // objLoader.load('model/HX_0' + iItem + '.obj', function(obj) {
-                objLoader.load('model/C.obj', function(obj) {
+                objLoader.load('model/HX_01.obj', function(obj) {
                 obj.traverse(function(child) {
                     if (child instanceof THREE.Mesh) {
                         child.material.side = THREE.DoubleSide;
